@@ -2,6 +2,7 @@ import Menu from "../models/menuModel.js";
 import expressAsyncHandler from "express-async-handler";
 
 const createMenu = expressAsyncHandler(async (req, res) => {
+  console.log(req.body)
   const { menu_name, menu_description, menu_items } = req.body;
 
   const newMenu = await Menu.create({
